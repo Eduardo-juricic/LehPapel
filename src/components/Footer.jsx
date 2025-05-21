@@ -1,9 +1,4 @@
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -15,22 +10,6 @@ export default function Footer() {
         </div>
         <div className="flex space-x-6 text-xl">
           <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-white"
-          >
-            <FaFacebookF />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-white"
-          >
-            <FaTwitter />
-          </a>
-          <a
             href="https://instagram.com"
             target="_blank"
             rel="noreferrer"
@@ -39,12 +18,12 @@ export default function Footer() {
             <FaInstagram />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://wa.me/SEUNUMERODEWHATSAPP" // substitua pelo seu número real com código do país, ex: 5511999999999
             target="_blank"
             rel="noreferrer"
             className="hover:text-white"
           >
-            <FaLinkedinIn />
+            <FaWhatsapp />
           </a>
         </div>
       </div>

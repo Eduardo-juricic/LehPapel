@@ -39,7 +39,7 @@ const products = [
   {
     id: 5,
     category: "cadernetas",
-    name: "Cardeneta de Vacinação",
+    name: "Caderneta de Vacinação",
     image: vacinação1,
   },
   {

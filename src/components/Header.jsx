@@ -89,15 +89,6 @@ function Header() {
                 Galeria
               </a>
             </li>
-            <li>
-              <a
-                href="#testimonials"
-                onClick={() => setIsOpen(false)}
-                className="block text-lg font-medium text-gray-700 hover:text-pink-600 transition duration-300 py-2 md:py-0"
-              >
-                Depoimentos
-              </a>
-            </li>
           </ul>
         </nav>
       </div>
