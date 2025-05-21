@@ -10,7 +10,7 @@ export default function Footer() {
         </div>
         <div className="flex space-x-6 text-xl">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/comprimor?igsh=MWNoa3lyZ3o4eWRxYg=="
             target="_blank"
             rel="noreferrer"
             className="hover:text-white"
