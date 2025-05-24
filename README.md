@@ -1,12 +1,61 @@
-# React + Vite
+# 🎀 Com Primor - Artesanato Personalizado 🎀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do `Com Primor`, uma landing page dedicada à venda de produtos artesanais, únicos e personalizados. Aqui, cada peça é feita com carinho e atenção aos detalhes, transformando materiais simples em obras de arte que contam histórias e celebram momentos especiais.
 
-Currently, two official plugins are available:
+Este projeto visa proporcionar uma vitrine digital encantadora para os produtos, facilitando o contato e a personalização para os clientes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Sobre o Projeto
 
-## Expanding the ESLint configuration
+O `Com Primor` não é apenas um site; é um convite para explorar a magia do artesanato personalizado. Nossa plataforma destaca:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Produtos Exclusivos:** Apresentação visualmente atraente de peças artesanais feitas à mão.
+* **Personalização Facilitada:** Um fluxo intuitivo para que os clientes possam solicitar produtos com toques únicos e personalizados.
+* **Design Acolhedor:** Uma interface limpa, responsiva e convidativa, refletindo a delicadeza e a atenção que dedicamos a cada produto.
+* **Conexão Direta:** Botões de contato claros e eficientes para facilitar a comunicação entre o cliente e o artesão.
+
+## 🚀 Tecnologias Utilizadas
+
+Este projeto foi construído com foco em simplicidade, performance e uma experiência de usuário agradável:
+
+* **HTML5:** Estrutura semântica para o conteúdo da página.
+* **CSS3:** Estilização moderna para um design responsivo e visualmente atraente.
+* **JavaScript:** Interatividade e funcionalidades dinâmicas na interface.
+
+## 🎨 Design e Estilo
+
+O design do `Com Primor` foi pensado para evocar sentimentos de calor, aconchego e exclusividade, utilizando:
+
+* **Paleta de Cores:** Cores suaves e harmoniosas que remetem ao universo artesanal e à delicadeza dos produtos.
+* **Tipografia:** Fontes que transmitem elegância e legibilidade, complementando a estética artesanal.
+* **Responsividade:** Layout adaptável a diferentes tamanhos de tela (desktops, tablets e celulares), garantindo uma experiência consistente.
+
+## 🛠️ Como Rodar Localmente
+
+Para clonar e rodar este projeto em sua máquina:
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/Eduardo-juricic/Com-Primor.git](https://github.com/Eduardo-juricic/Com-Primor.git)
+    ```
+2.  **Navegue até o diretório do projeto:**
+    ```bash
+    cd Com-Primor
+    ```
+3.  **Abra o arquivo `index.html` em seu navegador:**
+    Você pode simplesmente clicar duas vezes no arquivo `index.html` ou usar um servidor local (como o Live Server do VS Code) para uma melhor experiência de desenvolvimento.
+
+## 🎯 Objetivo
+
+O objetivo principal deste projeto é ser uma landing page eficaz para a `Com Primor`, convertendo visitantes em clientes interessados em nossos produtos personalizados, através de um design que transmite a paixão e a qualidade do nosso artesanato.
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Se você tiver sugestões ou melhorias, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+---
+
+Feito com ❤️ e criatividade por Eduardo Juricic.
