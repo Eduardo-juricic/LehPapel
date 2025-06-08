@@ -45,7 +45,8 @@ export default function CallToAction() {
           Produtos artesanais feitos para encantar e emocionar.
         </p>
         <a
-          href="#contact"
+          href="https://wa.me/message/UUG3ASGMKYAYE1"
+          target="_blank"
           className="relative inline-block w-full sm:w-auto px-8 sm:px-10 py-4 rounded-full text-lg font-bold bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-lg hover:scale-105 transition-transform duration-300 animate-pulse"
           style={{ animationDelay: "0.6s", animationFillMode: "both" }}
         >

@@ -25,7 +25,9 @@ function Hero() {
           cadernetas e sonhos feitos à mão com carinho.
         </p>
         <a
-          href="#contact"
+          href="https://wa.me/message/UUG3ASGMKYAYE1"
+          target="_blank" // Abre o link em uma nova aba
+          rel="noopener noreferrer" // Medida de segurança para links em nova aba
           className="inline-block bg-pink-600 text-white hover:bg-pink-700 px-10 py-4 rounded-full font-bold text-lg md:text-xl shadow-lg transform transition duration-300 hover:scale-105 animate-bounce-once"
         >
           Personalize Seu Sonho!

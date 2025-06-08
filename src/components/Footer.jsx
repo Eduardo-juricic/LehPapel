@@ -18,7 +18,7 @@ export default function Footer() {
             <FaInstagram />
           </a>
           <a
-            href="https://wa.me/SEUNUMERODEWHATSAPP" // substitua pelo seu número real com código do país, ex: 5511999999999
+            href="https://wa.me/message/UUG3ASGMKYAYE1"
             target="_blank"
             rel="noreferrer"
             className="hover:text-white"

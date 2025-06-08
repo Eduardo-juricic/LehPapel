@@ -1,27 +1,22 @@
 import React, { useState } from "react";
-// 1. Importe a imagem da logo
-import logoComPrimor from "../assets/Logo-Com-Primor.jpg"; // Verifique o caminho e a extensão correta (.jpg ou .png)
+// Verifique se o caminho da importação da sua logo está correto
+import logoComPrimor from "../assets/Logo-Com-Primor.jpg";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg py-4 px-6 sticky top-0 z-50">
+    // O padding vertical (py) foi aumentado para deixar o header maior
+    <header className="bg-white shadow-lg py-6 px-6 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo/Nome da Marca - Agora com a imagem */}
-        <a
-          href="#"
-          className="flex items-center space-x-3" // Usar flex para alinhar a imagem e o texto
-        >
-          {/* Adicione a imagem da logo aqui */}
+        {/* Logo da Marca */}
+        <a href="#" className="flex items-center">
+          {/* Logo com altura aumentada e bordas arredondadas (rounded-lg) */}
           <img
             src={logoComPrimor}
             alt="Logo Com Primor"
-            className="h-10 w-10 rounded-full object-cover" // Tamanho e arredondamento para a imagem
+            className="h-20 w-auto rounded-lg" // Altura maior e borda arredondada
           />
-          <span className="text-3xl font-extrabold text-pink-600 hover:text-purple-700 transition duration-300">
-            Com Primor
-          </span>
         </a>
 
         {/* Botão do Hamburguer para Mobile */}
