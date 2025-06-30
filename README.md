@@ -29,20 +29,6 @@ O design do `Com Primor` foi pensado para evocar sentimentos de calor, aconchego
 * **Tipografia:** Fontes que transmitem elegância e legibilidade, complementando a estética artesanal.
 * **Responsividade:** Layout adaptável a diferentes tamanhos de tela (desktops, tablets e celulares), garantindo uma experiência consistente.
 
-## 🛠️ Como Rodar Localmente
-
-Para clonar e rodar este projeto em sua máquina:
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/Eduardo-juricic/Com-Primor.git](https://github.com/Eduardo-juricic/Com-Primor.git)
-    ```
-2.  **Navegue até o diretório do projeto:**
-    ```bash
-    cd Com-Primor
-    ```
-3.  **Abra o arquivo `index.html` em seu navegador:**
-    Você pode simplesmente clicar duas vezes no arquivo `index.html` ou usar um servidor local (como o Live Server do VS Code) para uma melhor experiência de desenvolvimento.
 
 ## 🎯 Objetivo
 
@@ -52,9 +38,6 @@ O objetivo principal deste projeto é ser uma landing page eficaz para a `Com Pr
 
 Contribuições são bem-vindas! Se você tiver sugestões ou melhorias, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
 
 ---
 
