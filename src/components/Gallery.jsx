@@ -5,18 +5,21 @@ import hellokitty from "../assets/hello-kitty-caixas.jpg";
 import lembrancinhas from "../assets/lembrancinhas-aniversario.jpg";
 import batizado from "../assets/batizado.jpg";
 import topobolo from "../assets/topo de bolo.jpg";
-import vacinação1 from "../assets/cardeneta-vacina.jpg";
+import vacinacao1 from "../assets/cardeneta-vacina.jpg";
 import Kitfestavasco from "../assets/kit-festa.jpg";
 import topoboloanimal from "../assets/topo-animais.jpg";
 import Kitfestajunina from "../assets/kitfesta-junina.jpg";
-
-// --- IMPORTAÇÃO DAS NOVAS IMAGENS ---
-// ATENÇÃO: Os nomes dos arquivos devem corresponder aos que você salvou na pasta `src/assets`
 import lembrancinhasBiscuit from "../assets/Biscuit.jpg";
 import cadernoEucaristia from "../assets/PrimeiraEucaristia.jpg";
 import apliquesLeaozinho from "../assets/biscuitleaozinho.jpg";
 import agendaGirafa from "../assets/Agendaescolar.jpg";
 import manu from "../assets/cadernetavacinamanu.jpg";
+
+// --- IMPORTAÇÃO DAS 4 NOVAS IMAGENS ---
+import topoTurmaDaMonica from "../assets/topo-turma-da-monica.jpg";
+import topoVideoGame from "../assets/topo-video-game.jpg";
+import caixasPersonalizadas from "../assets/caixas-personalizadas.jpg";
+import kitFestaSafari from "../assets/kit-festa-safari.jpg";
 
 const products = [
   // --- SEUS PRODUTOS ANTIGOS CONTINUAM AQUI ---
@@ -48,7 +51,7 @@ const products = [
     id: 5,
     category: "cadernetas",
     name: "Caderneta de Vacinação",
-    image: vacinação1,
+    image: vacinacao1,
   },
   {
     id: 6,
@@ -68,7 +71,6 @@ const products = [
     name: "Kit Festa",
     image: Kitfestajunina,
   },
-  // --- NOVOS PRODUTOS ADICIONADOS ---
   {
     id: 9,
     category: "outros",
@@ -96,8 +98,34 @@ const products = [
   {
     id: 13,
     category: "cadernetas",
-    name: "Caderneta de  Vacinação",
+    name: "Caderneta de Vacinação",
     image: manu,
+  },
+
+  // --- 4 NOVOS PRODUTOS ADICIONADOS AO FINAL DA LISTA ---
+  {
+    id: 14,
+    category: "topos",
+    name: "Topo de Bolo Turma da Mônica",
+    image: topoTurmaDaMonica,
+  },
+  {
+    id: 15,
+    category: "topos",
+    name: "Topo de Bolo Vídeo Game",
+    image: topoVideoGame,
+  },
+  {
+    id: 16,
+    category: "kits",
+    name: "kit festa animais",
+    image: caixasPersonalizadas,
+  },
+  {
+    id: 17,
+    category: "kits",
+    name: "Kit Festa Safari",
+    image: kitFestaSafari,
   },
 ];
 
