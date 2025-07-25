@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "category": "outros",
+    "name": "Lembrancinha da Hello Kitty",
+    "image": "/product-images/hello-kitty-caixas.jpg"
+  },
+  {
+    "id": 2,
+    "category": "outros",
+    "name": "Lembrancinhas do PSG",
+    "image": "/product-images/lembrancinhas-aniversario.jpg"
+  },
+  {
+    "id": 3,
+    "category": "outros",
+    "name": "Lembrancinha de Batizado",
+    "image": "/product-images/batizado.jpg"
+  },
+  {
+    "id": 4,
+    "category": "topos",
+    "name": "Topo de Bolo Fundo do Mar",
+    "image": "/product-images/topo de bolo.jpg"
+  },
+  {
+    "id": 5,
+    "category": "cadernetas",
+    "name": "Caderneta de Vacinação",
+    "image": "/product-images/cardeneta-vacina.jpg"
+  },
+  {
+    "id": 6,
+    "category": "kits",
+    "name": "Kit Festa do Vasco",
+    "image": "/product-images/kit-festa.jpg"
+  },
+  {
+    "id": 7,
+    "category": "topos",
+    "name": "Topo de Bolo de Animais",
+    "image": "/product-images/topo-animais.jpg"
+  },
+  {
+    "id": 8,
+    "category": "kits",
+    "name": "Kit Festa",
+    "image": "/product-images/kitfesta-junina.jpg"
+  },
+  {
+    "id": 9,
+    "category": "outros",
+    "name": "Lembrancinhas de Biscuit",
+    "image": "/product-images/Biscuit.jpg"
+  },
+  {
+    "id": 10,
+    "category": "cadernetas",
+    "name": "Caderno Primeira Eucaristia",
+    "image": "/product-images/PrimeiraEucaristia.jpg"
+  },
+  {
+    "id": 11,
+    "category": "outros",
+    "name": "Apliques de Leãozinho em Biscuit",
+    "image": "/product-images/biscuitleaozinho.jpg"
+  },
+  {
+    "id": 12,
+    "category": "cadernetas",
+    "name": "Agenda Escolar Personalizada",
+    "image": "/product-images/Agendaescolar.jpg"
+  },
+  {
+    "id": 13,
+    "category": "cadernetas",
+    "name": "Caderneta de Vacinação",
+    "image": "/product-images/cadernetavacinamanu.jpg"
+  },
+  {
+    "id": 14,
+    "category": "topos",
+    "name": "Topo de Bolo Turma da Mônica",
+    "image": "/product-images/topo-turma-da-monica.jpg"
+  },
+  {
+    "id": 15,
+    "category": "topos",
+    "name": "Topo de Bolo Vídeo Game",
+    "image": "/product-images/topo-video-game.jpg"
+  },
+  {
+    "id": 16,
+    "category": "kits",
+    "name": "kit festa animais",
+    "image": "/product-images/caixas-personalizadas.jpg"
+  },
+  {
+    "id": 17,
+    "category": "kits",
+    "name": "Kit Festa Safari",
+    "image": "/product-images/kit-festa-safari.jpg"
+  }
+]

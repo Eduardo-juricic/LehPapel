@@ -1,136 +1,15 @@
-import React, { useState } from "react";
-
-// IMPORTAÇÃO DAS IMAGENS ANTIGAS
-import hellokitty from "../assets/hello-kitty-caixas.jpg";
-import lembrancinhas from "../assets/lembrancinhas-aniversario.jpg";
-import batizado from "../assets/batizado.jpg";
-import topobolo from "../assets/topo de bolo.jpg";
-import vacinacao1 from "../assets/cardeneta-vacina.jpg";
-import Kitfestavasco from "../assets/kit-festa.jpg";
-import topoboloanimal from "../assets/topo-animais.jpg";
-import Kitfestajunina from "../assets/kitfesta-junina.jpg";
-import lembrancinhasBiscuit from "../assets/Biscuit.jpg";
-import cadernoEucaristia from "../assets/PrimeiraEucaristia.jpg";
-import apliquesLeaozinho from "../assets/biscuitleaozinho.jpg";
-import agendaGirafa from "../assets/Agendaescolar.jpg";
-import manu from "../assets/cadernetavacinamanu.jpg";
-
-// --- IMPORTAÇÃO DAS 4 NOVAS IMAGENS ---
-import topoTurmaDaMonica from "../assets/topo-turma-da-monica.jpg";
-import topoVideoGame from "../assets/topo-video-game.jpg";
-import caixasPersonalizadas from "../assets/caixas-personalizadas.jpg";
-import kitFestaSafari from "../assets/kit-festa-safari.jpg";
-
-const products = [
-  // --- SEUS PRODUTOS ANTIGOS CONTINUAM AQUI ---
-  {
-    id: 1,
-    category: "outros",
-    name: "Lembrancinha da Hello Kitty",
-    image: hellokitty,
-  },
-  {
-    id: 2,
-    category: "outros",
-    name: "Lembrancinhas do PSG",
-    image: lembrancinhas,
-  },
-  {
-    id: 3,
-    category: "outros",
-    name: "Lembrancinha de Batizado",
-    image: batizado,
-  },
-  {
-    id: 4,
-    category: "topos",
-    name: "Topo de Bolo Fundo do Mar",
-    image: topobolo,
-  },
-  {
-    id: 5,
-    category: "cadernetas",
-    name: "Caderneta de Vacinação",
-    image: vacinacao1,
-  },
-  {
-    id: 6,
-    category: "kits",
-    name: "Kit Festa do Vasco",
-    image: Kitfestavasco,
-  },
-  {
-    id: 7,
-    category: "topos",
-    name: "Topo de Bolo de Animais",
-    image: topoboloanimal,
-  },
-  {
-    id: 8,
-    category: "kits",
-    name: "Kit Festa",
-    image: Kitfestajunina,
-  },
-  {
-    id: 9,
-    category: "outros",
-    name: "Lembrancinhas de Biscuit",
-    image: lembrancinhasBiscuit,
-  },
-  {
-    id: 10,
-    category: "cadernetas",
-    name: "Caderno Primeira Eucaristia",
-    image: cadernoEucaristia,
-  },
-  {
-    id: 11,
-    category: "outros",
-    name: "Apliques de Leãozinho em Biscuit",
-    image: apliquesLeaozinho,
-  },
-  {
-    id: 12,
-    category: "cadernetas",
-    name: "Agenda Escolar Personalizada",
-    image: agendaGirafa,
-  },
-  {
-    id: 13,
-    category: "cadernetas",
-    name: "Caderneta de Vacinação",
-    image: manu,
-  },
-
-  // --- 4 NOVOS PRODUTOS ADICIONADOS AO FINAL DA LISTA ---
-  {
-    id: 14,
-    category: "topos",
-    name: "Topo de Bolo Turma da Mônica",
-    image: topoTurmaDaMonica,
-  },
-  {
-    id: 15,
-    category: "topos",
-    name: "Topo de Bolo Vídeo Game",
-    image: topoVideoGame,
-  },
-  {
-    id: 16,
-    category: "kits",
-    name: "kit festa animais",
-    image: caixasPersonalizadas,
-  },
-  {
-    id: 17,
-    category: "kits",
-    name: "Kit Festa Safari",
-    image: kitFestaSafari,
-  },
-];
+import React, { useState, useEffect } from "react";
 
 function Gallery() {
+  const [products, setProducts] = useState([]);
   const [filter, setFilter] = useState("all");
+
+  useEffect(() => {
+    fetch("/data/products.json")
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Erro ao carregar os produtos:", error));
+  }, []);
 
   const filteredProducts = products.filter((product) => {
     if (filter === "all") return true;
