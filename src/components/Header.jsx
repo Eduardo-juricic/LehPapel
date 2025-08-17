@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // Verifique se o caminho da importação da sua logo está correto
-import logoComPrimor from "../assets/Logo-Com-Primor.jpg";
+import logolehpapel from "../assets/logo-lehpapel-Photoroom.png";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ function Header() {
         <a href="#" className="flex items-center">
           {/* Logo com altura aumentada e bordas arredondadas (rounded-lg) */}
           <img
-            src={logoComPrimor}
+            src={logolehpapel}
             alt="Logo Com Primor"
             className="h-20 w-auto rounded-lg" // Altura maior e borda arredondada
           />

@@ -1,4 +1,3 @@
-import { Features } from "tailwindcss";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -10,7 +9,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className=" bg-pink-200">
+    <div className="bg-pink-200">
       <Header />
       <Hero />
       <Serviços />

@@ -1,11 +1,27 @@
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import React, { useMemo } from "react";
+import Particles from "@tsparticles/react";
 
 export default function CallToAction() {
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  }, []);
+  const particlesOptions = useMemo(
+    () => ({
+      fullScreen: false,
+      background: { color: "transparent" },
+      particles: {
+        number: { value: 80, density: { enable: true, area: 800 } },
+        color: { value: "#ffffff" },
+        links: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.3,
+        },
+        move: { enable: true, speed: 0.8 },
+        opacity: { value: 0.5 },
+        size: { value: 2 },
+      },
+    }),
+    []
+  );
 
   return (
     <section
@@ -13,26 +29,9 @@ export default function CallToAction() {
       style={{ minHeight: "400px" }}
     >
       <Particles
-        id="tsparticles"
-        init={particlesInit}
+        id="tsparticles-cta"
+        options={particlesOptions}
         className="absolute inset-0"
-        options={{
-          fullScreen: false,
-          background: { color: "transparent" },
-          particles: {
-            number: { value: 80, density: { enable: true, area: 800 } },
-            color: { value: "#ffffff" },
-            links: {
-              enable: true,
-              distance: 150,
-              color: "#ffffff",
-              opacity: 0.3,
-            },
-            move: { enable: true, speed: 0.8 },
-            opacity: { value: 0.5 },
-            size: { value: 2 },
-          },
-        }}
       />
       <div className="relative z-10 max-w-xl mx-auto px-6">
         <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 animate-fade-in-up leading-tight">
