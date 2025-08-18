@@ -12,21 +12,21 @@ const HeartsAnimation = () => {
         emoji: heartEmojis[Math.floor(Math.random() * heartEmojis.length)],
         style: {
           left: `${Math.random() * 100}%`,
-          // AJUSTE DE VELOCIDADE: Aumentei os números aqui para a animação durar mais (ficar mais lenta)
-          animationDuration: `${Math.random() * 5 + 8}s`, // Duração entre 8s e 13s
+          // VELOCIDADE AJUSTADA: Duração da animação agora é entre 4s e 7s
+          animationDuration: `${Math.random() * 3 + 4}s`,
           fontSize: `${Math.random() * 20 + 15}px`,
         },
       };
 
       setHearts((currentHearts) => [...currentHearts, newHeart]);
 
-      // Aumentei o tempo para limpar os corações, de acordo com a nova duração
+      // Tempo para limpar os corações ajustado para a nova duração máxima
       setTimeout(() => {
         setHearts((currentHearts) =>
           currentHearts.filter((heart) => heart.id !== newHeart.id)
         );
-      }, 13000); // Deve ser igual ou maior que a duração máxima da animação
-    }, 150); // AJUSTE DE QUANTIDADE: Diminuí o número aqui para criar corações mais rápido
+      }, 7000); // Ajustado para 7 segundos
+    }, 100); // Mantive a criação rápida de corações
 
     return () => clearInterval(interval);
   }, []);

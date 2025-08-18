@@ -6,16 +6,22 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    // O padding vertical (py) foi aumentado para deixar o header maior
+    // Mantendo o padding original do header
     <header className="bg-white shadow-lg py-6 px-6 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo da Marca */}
         <a href="#" className="flex items-center">
-          {/* Logo com altura aumentada e bordas arredondadas (rounded-lg) */}
+          {/* - A altura (h-20) define o espaço que a imagem ocupa.
+            - "transform" habilita as transformações.
+            - "scale-150" aumenta o tamanho visual da imagem em 50%.
+              Você pode ajustar este valor (ex: scale-125, scale-175).
+            - "origin-left" faz com que a imagem cresça para a direita,
+              mantendo-se alinhada à esquerda.
+          */}
           <img
             src={logolehpapel}
             alt="Logo Com Primor"
-            className="h-20 w-auto rounded-lg" // Altura maior e borda arredondada
+            className="h-20 w-auto rounded-lg transform scale-150 origin-left"
           />
         </a>
 
