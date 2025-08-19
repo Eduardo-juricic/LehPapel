@@ -1,9 +1,13 @@
+// src/components/Gallery.jsx
+
 import React, { useState, useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 function Gallery() {
   const [products, setProducts] = useState([]);
-  const SEU_NUMERO_DE_TELEFONE = "554299908890"; // Substitua pelo seu número com código do país
+
+  // MUDANÇA 1: O link agora é uma constante única
+  const linkWhatsApp = "https://wa.me/message/ULTCXD2I6AJBG1";
 
   useEffect(() => {
     fetch("/data/products.json")
@@ -19,43 +23,42 @@ function Gallery() {
           Nossa Galeria de Encantamento
         </h2>
 
-        {/* Grid de Imagens */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {products.map((product) => {
-            const mensagem = `Olá, tenho interesse no produto: ${product.name}`;
-            const linkWhatsApp = `https://wa.me/${SEU_NUMERO_DE_TELEFONE}?text=${encodeURIComponent(
-              mensagem
-            )}`;
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-200 flex flex-col group"
+            >
+              <div className="relative w-full h-80 overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
 
-            return (
-              <div
-                key={product.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-200 flex flex-col"
-              >
-                <div className="relative w-full h-80 overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                <div className="p-4 flex-grow flex flex-col">
-                  <div className="mt-auto">
-                    <a
-                      href={linkWhatsApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full px-4 py-2 rounded-full font-semibold text-white bg-green-500 hover:bg-green-600 transition duration-300"
-                    >
-                      <FaWhatsapp size={20} />
-                      Solicitar Orçamento
-                    </a>
-                  </div>
+              <div className="p-4 flex-grow flex flex-col text-left">
+                <div className="mt-auto">
+                  {/* MUDANÇA 2: O link é aplicado aqui e o botão foi reestilizado */}
+                  <a
+                    href={linkWhatsApp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      inline-flex items-center justify-center gap-2 w-full px-4 py-3
+                      rounded-lg font-semibold text-white
+                      bg-gradient-to-r from-pink-500 to-fuchsia-500
+                      shadow-lg transition-all duration-300
+                      hover:scale-105 hover:shadow-xl
+                    "
+                  >
+                    <FaWhatsapp size={20} />
+                    Solicitar Orçamento
+                  </a>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         {products.length === 0 && (

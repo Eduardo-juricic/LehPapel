@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
 import HeartsAnimation from "./HeartsAnimation";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 // As variantes de animação continuam as mesmas
 const animationVariants = {

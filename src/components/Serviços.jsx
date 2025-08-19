@@ -1,14 +1,14 @@
 // src/components/Serviços.jsx
 
-import React from "react";
-// Importação do vídeo
-import videoFile from "../assets/videorell.mp4";
+import { useRef } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion, useInView } from "framer-motion";
 
 const features = [
   {
     icon: (
       <svg
-        className="w-10 h-10 text-pink-600"
+        className="w-12 h-12 text-pink-600"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -29,7 +29,7 @@ const features = [
   {
     icon: (
       <svg
-        className="w-10 h-10 text-pink-600"
+        className="w-12 h-12 text-pink-600"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -50,7 +50,7 @@ const features = [
   {
     icon: (
       <svg
-        className="w-10 h-10 text-pink-600"
+        className="w-12 h-12 text-pink-600"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -70,54 +70,81 @@ const features = [
   },
 ];
 
-function Features() {
-  return (
-    <section id="features" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        {/* --- ALTERAÇÃO AQUI --- */}
-        {/* Usamos um grid de 5 colunas para ter mais controle. */}
-        {/* O vídeo ocupará 2 partes e os cards 3 partes. */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-16 items-center">
-          {/* COLUNA DA ESQUERDA (VÍDEO) - Ocupando 2 das 5 colunas */}
-          <div className="md:col-span-2 w-full rounded-2xl overflow-hidden shadow-2xl">
-            <video
-              className="w-full h-full"
-              src={videoFile}
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              Seu navegador não suporta a tag de vídeo.
-            </video>
-          </div>
+function Servicos() {
+  // Hook para detectar quando o componente está visível
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-          {/* COLUNA DA DIREITA (CARDS) - Ocupando 3 das 5 colunas */}
-          <div className="md:col-span-3">
-            <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center md:text-left">
-              Por que escolher Com Primor?
-            </h2>
-            <div className="flex flex-col gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-300"
-                >
-                  <div className="flex items-center gap-4">
-                    {feature.icon}
-                    <h3 className="text-2xl font-semibold text-gray-900">
-                      {feature.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-700 mt-4">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+  // Variantes de animação para o container dos cards
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Atraso entre a animação de cada card
+      },
+    },
+  };
+
+  // Variantes de animação para cada card individual
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  return (
+    <section id="features" className="py-20 bg-gray-50 overflow-hidden">
+      <div ref={ref} className="container mx-auto px-6 text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="text-4xl font-bold text-gray-800 mb-4"
+        >
+          Por que escolher a LehPapel?
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-lg text-gray-600 mb-16 max-w-2xl mx-auto"
+        >
+          Nós acreditamos que cada detalhe importa. Veja o que torna nossos
+          produtos tão especiais.
+        </motion.p>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-lg transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-200 flex flex-col items-center"
+              variants={itemVariants}
+            >
+              <div className="mb-6">{feature.icon}</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                {feature.title}
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                {feature.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
 }
 
-export default Features;
+export default Servicos;
